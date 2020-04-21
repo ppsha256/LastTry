@@ -65,14 +65,14 @@ public class Assets {
 	 * @return The region or null, if it is not found
 	 */
 	public static TextureRegion getTexture(String name) {
-		return manager.get("atlas/textures.atlas", TextureAtlas.class).findRegion(name);
+		return manager.get("core/assets/atlas/textures.atlas", TextureAtlas.class).findRegion(name);
 	}
 
 	/**
 	 * Loads fonts
 	 */
 	private static void loadFonts() {
-		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("pico8.ttf"));
+		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("core/assets/pico8.ttf"));
 		FreeTypeFontGenerator.FreeTypeFontParameter parameters = new FreeTypeFontGenerator.FreeTypeFontParameter();
 
 		parameters.size = 4;
@@ -86,7 +86,7 @@ public class Assets {
 	 * Loads textures
 	 */
 	private static void loadTextures() {
-		manager.load("atlas/textures.atlas", TextureAtlas.class);
+		manager.load("core/assets/atlas/textures.atlas", TextureAtlas.class);
 		manager.finishLoading();
 	}
 

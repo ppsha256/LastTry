@@ -14,7 +14,7 @@ public class AssetLoader {
 		JsonReader reader = new JsonReader();
 
 		try {
-			JsonValue root = reader.parse(Gdx.files.internal("data/" + file + ".json"));
+			JsonValue root = reader.parse(Gdx.files.internal("core/assets/data/" + file + ".json"));
 
 			for (JsonValue asset : root) {
 				factory.parse(asset);
